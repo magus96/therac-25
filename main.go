@@ -8,7 +8,7 @@ import (
 var mode string
 
 func setMode(m string) {
-	time.Sleep(2 * time.Second)
+	time.Sleep(8 * time.Second)
 	mode = m
 }
 
@@ -25,7 +25,7 @@ func irradiate(duration int, radMode string) int {
 
 func main() {
 	go setMode("E")
-	time.Sleep(2 * time.Second)
+	time.Sleep(8 * time.Second)
 	go setMode("X")
 	rad := irradiate(10, mode)
 	fmt.Printf("You were irradiated with %d rads!!!\n", rad)
